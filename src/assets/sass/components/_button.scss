@@ -1,0 +1,16 @@
+$planetColors: ("mercury": $lightBlue, "venus": $yellow, "earth": $purple, "mars": $redOrange, "jupiter": $red, "saturn": $orange, "uranus": $green, "neptune": $blue);
+
+.btn {
+    // uses h3
+    border: 1px solid $white;
+
+    &_num {
+        opacity: 0.5;
+    }
+}
+
+@each $name, $color in $planetColors {
+    .button-#{$name} {
+        @include buttonBkg($color)
+    }
+}
