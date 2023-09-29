@@ -1,8 +1,11 @@
-const Layout = () => {
+import NavBar from "../Components/NavBar"
+
+const Layout = ({children}) => {
   return (
-    <div>
-      hi
-    </div>
+    <>
+      <NavBar />
+      <main>{children}</main>
+    </>
   )
 }
 

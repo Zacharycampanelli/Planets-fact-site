@@ -4,11 +4,13 @@ import Layout from './Layout/Layout';
 function App() {
   return (
     <Router>
-      <Routes>
-        {planetData.map((planet, index) => (
-          <Route key={index} path={`/${planet.name.toLowerCase()}`} element={<Layout />} />
-        ))}
-      </Routes>
+      <Layout>
+        <Routes>
+          {planetData.map((planet, index) => (
+            <Route key={index} path={`/${planet.name.toLowerCase()}`} element={<Layout />} />
+          ))}
+        </Routes>
+      </Layout>
     </Router>
   );
 }
