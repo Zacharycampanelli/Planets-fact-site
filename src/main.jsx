@@ -6,7 +6,6 @@ import './assets/fonts/Antonio-Medium.ttf'
 import './assets/fonts/Spartan-Bold.ttf'
 import './assets/fonts/Spartan-Regular.ttf'
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />

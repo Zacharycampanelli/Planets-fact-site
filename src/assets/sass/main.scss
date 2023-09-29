@@ -8,7 +8,10 @@
 
 // 2. Vendors
 @import
-  'vendors/normalize';
+  'vendors/normalize',
+  '~bootstrap/scss/bootstrap';
+
+;
 
 // 3. Base stuff
 @import
