@@ -9,7 +9,7 @@
 // 2. Vendors
 @import
   'vendors/normalize',
-  '~bootstrap/scss/bootstrap';
+  'vendors/bootstrap';
 
 ;
 
@@ -27,7 +27,8 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/navbar';
 
 // 6. Page-specific styles
 // @import
