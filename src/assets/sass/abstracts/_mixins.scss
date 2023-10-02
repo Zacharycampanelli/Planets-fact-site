@@ -41,6 +41,6 @@
 @each $item, $colors in $planetList {
   #dot-#{$item} {
       @include listDot($color: $colors);
-      @include screen-md  { display: none}
+      @include screen-lg  { display: none}
   }
 }

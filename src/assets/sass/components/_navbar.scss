@@ -1,57 +1,77 @@
-
-
 #navbar {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  overflow-x: hidden;
 
+  &-container {
     display: flex;
-    justify-content: center;
-    width: 100vw;
+    padding: 1rem;
 
-    &-container {
-        display: flex;
-        padding: 1rem;
+    @include screen-lg {
+      flex-direction: column;
+      justify-content: center;
     }
+  }
 
   #title {
     font-family: 'AntonioMedium';
     font-size: 28px;
-  
     text-transform: uppercase;
     color: white;
+
+    @include screen-lg {
+      margin: 1.5vh auto 2.5vh;
+    }
   }
 
   #basic-navbar-nav {
     background-color: $navy;
 
     .planet-list {
-    padding: 0;
-      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      @include screen-lg {
+        flex-direction: row;
+        width: 95vw;
+      }
 
       &-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
-          width: 90vw;
-          margin: 0 auto;
-          padding: 20px;
-          border-bottom: 1px solid $opaqueWhite;
+        width: 90vw;
+        margin: 0 auto;
+        padding: 20px;
+        border-bottom: 1px solid $opaqueWhite;
+
+        @include screen-lg {
+          width: 11vw;
+          padding: 1rem;
+          border: none;
+        }
 
         &-link {
-            font-family: 'SpartanBold';
-            font-size: 15px;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: $white;
-
-           
+          font-family: 'SpartanBold';
+          font-size: 15px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $white;
 
           &:visited {
             color: $white;
           }
+
+          @include screen-lg {
+            font-size: 11px;
+          }
         }
 
         &-arrow {
-            margin-left:20px;
-            justify-self:end;
+          margin-left: 20px;
+          justify-self: end;
         }
       }
     }
@@ -60,13 +80,17 @@
 
 // Located in Layout component
 #nav-border {
-    position: relative;
-    left: 50%;
-    width: 100vw;
-    margin-left: -50vw;
-    color: $white;
+  position: relative;
+  left: 50%;
+  width: 120vw;
+  margin-left: -50vw;
+  color: $white;
+
+  @include screen-lg {
+    width: 160vw;
+  }
 }
 
 .hamburger-icon {
-    opacity: 0.25;
+  opacity: 0.25;
 }
