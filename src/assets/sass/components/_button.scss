@@ -1,16 +1,25 @@
-$planetColors: ("mercury": $lightBlue, "venus": $yellow, "earth": $purple, "mars": $redOrange, "jupiter": $red, "saturn": $orange, "uranus": $green, "neptune": $blue);
+$planetColors: (
+  'mercury': $Mercury,
+  'venus': $Venus,
+  'earth': $Earth,
+  'mars': $Mars,
+  'jupiter': $Jupiter,
+  'saturn': $Saturn,
+  'uranus': $Uranus,
+  'neptune': $Neptune,
+);
 
 .btn {
-    // uses h3
-    border: 1px solid $white;
+  // uses h3
+  border: 1px solid $white;
 
-    &_num {
-        opacity: 0.5;
-    }
+  &_num {
+    opacity: 0.5;
+  }
 }
 
 @each $name, $color in $planetColors {
-    .button-#{$name} {
-        @include buttonBkg($color)
-    }
+  .button-#{$name} {
+    @include buttonBkg($color);
+  }
 }

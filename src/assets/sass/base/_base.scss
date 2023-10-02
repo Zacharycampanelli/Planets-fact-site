@@ -21,15 +21,16 @@ html {
   box-sizing: inherit;
 }
 
-/**
- * Basic styles for links
- */
-a {
-  color: $brand-color;
-  text-decoration: none;
+body {
+  background-color: $navy;
+  background-size: cover;
+  background-image: url('/src/assets/images/background-stars.svg');
 
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
 }
+
+// .container{
+  
+//   // background-size: cover;
+//   width: 100vw;
+//   height: 100vh;
+// }

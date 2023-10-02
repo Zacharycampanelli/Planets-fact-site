@@ -1,18 +1,22 @@
 // Colors
-$white: #FFFFFF;
+$white: #ffffff;
 $navy: #070724;
-$darkGray: #38384F;
+$darkGray: #38384f;
 $lightGray: #838391;
-$lightBlue:  #419EBB;
-$yellow: #EDA249;
-$purple: #6F2ED6;
-$redOrange: #D14C32;
-$red: #D83A34;
-$orange: #CD5120;
-$green: #1EC2A4;
-$blue: #2D68F0;
+$Mercury: #419ebb;
+$Venus: #eda249;
+$Earth: #6f2ed6;
+$Mars: #d14c32;
+$Jupiter: #d83a34;
+$Saturn: #cd5120;
+$Uranus: #1ec2a4;
+$Neptune: #2d68f0;
 
-// Media Query variables 
+// $planetColorOrder: $Mercury, $Venus, $Earth, $Mars, $Jupiter, $Saturn, $Uranus, $Neptune;
+// $planetOrder: 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune';
+$planetList: ("Mercury": $Mercury, "Venus": $Venus, "Earth": $Earth, "Mars": $Mars, "Jupiter": $Jupiter, "Saturn": $Saturn, "Uranus": $Uranus, "Neptune": $Neptune);
+$opaqueWhite: rgba(255, 255, 255, 0.1);
+// Media Query variables
 $screen-xs: 325px;
 $screen-sm: 480px;
 $screen-md: 600px;
@@ -27,7 +31,5 @@ $grid-breakpoints: (
   lg: 600px,
   xl: 768px,
   xxl: 1025px,
-  2xl: 1440px
+  2xl: 1440px,
 );
-
-

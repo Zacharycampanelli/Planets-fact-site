@@ -27,3 +27,20 @@
   }
 }
 
+// Style for colored dots in navbar
+@mixin listDot($color) {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: $color;
+}
+
+// used to create the dots next to each planet in the navbar for smaller sizes
+@each $item, $colors in $planetList {
+  #dot-#{$item} {
+      @include listDot($color: $colors);
+      @include screen-md  { display: none}
+  }
+}
