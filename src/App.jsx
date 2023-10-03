@@ -6,7 +6,7 @@ import ThemeProvider from 'react-bootstrap/ThemeProvider';
 function App() {
   return (
     <ThemeProvider breakpoints={['xs', 'sm', 'md', 'lg', 'xl', 'xxl', '2xl']} minBreakpoint="xs">
-      <div className="container">
+      <div className="wrapper">
         <Router>
           <Layout>
             <Routes>

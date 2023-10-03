@@ -7,6 +7,8 @@ import { useMediaQuery } from '@uidotdev/usehooks';
 
 function NavBar() {
   const isLargerThanMedium = useMediaQuery('only screen and (min-width: 768px)');
+  const isMediumToXxl = useMediaQuery('only screen and (min-width: 768px) and (max-width: 1440px)');
+  const isLargerThanXxl = useMediaQuery('only screen and (min-width: 1440px)');
 
   const createDot = (planet) => {
     return `dot-${planet}`;
@@ -15,6 +17,7 @@ function NavBar() {
   // if (size.width > 480) return <>hi</>;
 
   return (
+    <div id="xxl-nav">
     <Navbar expand="lg" id="navbar">
       <Container id="navbar-container">
         <Navbar.Brand id="title">The Planets</Navbar.Brand>
@@ -45,9 +48,11 @@ function NavBar() {
             </div>
           </Nav>
         </Navbar.Collapse>
-              {isLargerThanMedium && <hr id="nav-border" />}
+              {isMediumToXxl && <hr id="nav-border" />}
       </Container>
     </Navbar>
+        {isLargerThanXxl && <hr id="nav-border" /> }
+    </div>
   );
 }
 
