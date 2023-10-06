@@ -1,0 +1,13 @@
+#secondary_navbar {
+    
+    &_nav {
+        
+        display: flex;
+        justify-content: space-around;
+        width: 100vw;
+
+        .secondary_link {
+            font-size: 9px;
+        }
+    }
+}
