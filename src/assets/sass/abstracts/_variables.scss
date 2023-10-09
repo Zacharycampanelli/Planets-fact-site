@@ -1,20 +1,57 @@
+@use "sass:meta";
 // Colors
 $white: #ffffff;
 $navy: #070724;
 $darkGray: #38384f;
 $lightGray: #838391;
-$Mercury: #419ebb;
-$Venus: #eda249;
-$Earth: #6f2ed6;
-$Mars: #d14c32;
-$Jupiter: #d83a34;
-$Saturn: #cd5120;
-$Uranus: #1ec2a4;
-$Neptune: #2d68f0;
+$mercury: #419ebb;
+$venus: #eda249;
+$earth: #6f2ed6;
+$mars: #d14c32;
+$jupiter: #d83a34;
+$saturn: #cd5120;
+$uranus: #1ec2a4;
+$neptune: #2d68f0;
 
-// $planetColorOrder: $Mercury, $Venus, $Earth, $Mars, $Jupiter, $Saturn, $Uranus, $Neptune;
-// $planetOrder: 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune';
-$planetList: ("Mercury": $Mercury, "Venus": $Venus, "Earth": $Earth, "Mars": $Mars, "Jupiter": $Jupiter, "Saturn": $Saturn, "Uranus": $Uranus, "Neptune": $Neptune);
+// Used with root declaration and css-color-var function to use css variables 
+$css-color-vars: (
+white: #ffffff,
+navy: #070724,
+darkGray: #38384f,
+lightGray: #838391,
+mercury: #419ebb,
+venus: #eda249,
+earth: #6f2ed6,
+mars: #d14c32,
+jupiter: #d83a34,
+saturn: #cd5120,
+uranus: #1ec2a4,
+neptune: #2d68f0,
+);
+
+
+
+
+
+
+// :root {
+//   --mercury: #419ebb;
+//   --planet-color: #{meta.inspect($mercury)};
+// }
+
+$planetColor: css-color-var(mercury);
+$planetColorOrder: $mercury, $venus, $earth, $mars, $jupiter, $saturn, $uranus, $neptune;
+$planetOrder: 'mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune';
+$planetList: (
+  'mercury': $mercury,
+  'venus': $venus,
+  'earth': $earth,
+  'mars': $mars,
+  'jupiter': $jupiter,
+  'saturn': $saturn,
+  'uranus': $uranus,
+  'neptune': $neptune,
+);
 $opaqueWhite: rgba(255, 255, 255, 0.1);
 // Media Query variables
 $screen-xs: 325px;

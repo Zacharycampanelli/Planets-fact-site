@@ -28,6 +28,13 @@ body {
 
 }
 
+
+:root {
+  @each $color_name, $color in $css-color-vars {
+    --color-#{$color_name}: #{$color};
+  }
+  --planet-color: css-color-var(venus);
+}
 // .wrapper{
   
 //   width: 100vw;

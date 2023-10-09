@@ -8,6 +8,22 @@
 
         .secondary_link {
             font-size: 9px;
+            text-decoration: none;
+            color: $white;
+        }
+        
+        
+        
+    }
+    @each $planet in $planetOrder {
+        .active-#{$planet} {
+            border-bottom: 3px solid css-color-var($planet);
         }
     }
+
+    // .active {
+    //     border-bottom: 3px solid css-color-var(mercury);
+        
+    // }
+
 }

@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--navy);
+  background-size: cover;
+  background-image: url('/src/assets/images/background-stars.svg');
+  font-family: 'AntonioMedium';
+  color: var(--white);
+}
+
+/* Planet Name */
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+/* Stats */
+h2 {
+  font-size: 20px;
+  letter-spacing: -0.75px;
+}
+
+/* Source */
+h3 {
+  font-family: 'SpartanRegular';
+  font-size: 12px;
+  font-style: normal;
+  line-height: 25px;
+}
+
+/* Stat headers */
+h4 {
+  font-family: 'SpartanBold';
+  font-size: 8px;
+  line-height: 16px;
+  letter-spacing: 0.727px;
+}
+
+/* Description */
+p {
+
+text-align: center;
+font-family: 'SpartanRegular';
+font-size: 11px;
+line-height: 22px; 
+}

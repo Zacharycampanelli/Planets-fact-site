@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import planetsData from '../../assets/data/data';
 import { useMediaQuery } from '@uidotdev/usehooks';
 
-function NavBar() {
+function NavBar({ navToggleOpen, setNavToggleOpen}) {
   const isLargerThanMedium = useMediaQuery('only screen and (min-width: 768px)');
   const isMediumToXxl = useMediaQuery('only screen and (min-width: 768px) and (max-width: 1440px)');
   const isLargerThanXxl = useMediaQuery('only screen and (min-width: 1440px)');
@@ -14,11 +14,16 @@ function NavBar() {
     return `dot-${planet}`;
   };
 
+  const setToggleStatus = () => {
+    setNavToggleOpen(prev => !prev)
+    console.log()
+  }
+
   // if (size.width > 480) return <>hi</>;
 
   return (
     <div id="xxl-nav">
-      <Navbar expand="lg" id="navbar">
+      <Navbar expand="lg" expanded={navToggleOpen} id="navbar"  onToggle={setToggleStatus}>
         <Container id="navbar-container">
           <Navbar.Brand id="title">The Planets</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -36,7 +41,7 @@ function NavBar() {
                 {planetsData.map((planet, index) => (
                   <Nav.Item className="planet-list-item" key={index}>
                     <span>
-                      {!isLargerThanMedium && <div id={createDot(planet.name)}></div>}
+                      {!isLargerThanMedium && <div id={createDot(planet.name.toLowerCase())}></div>}
                       <NavLink className="planet-list-item-link" to={`/${planet.name.toLowerCase()}/overview`}>
                         {planet.name}
                       </NavLink>
