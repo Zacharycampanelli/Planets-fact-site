@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 // import MercuryImage from '../assets/images/planet-mercury.svg';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import planetData from '../assets/data/data';
 import ImageContainer from '../Components/ImageContainer/ImageContainer';
 import SourceIcon from '../assets/images/icon-source.svg';
@@ -31,8 +31,13 @@ const Overview = () => {
   
       'Average Temp.': current.temperature
      }
+
+     const getPlanetWikiUrl =  () => {
+       const url =  `https://en.wikipedia.org/wiki/${current.name}_(planet)`
+      return url; 
+     }
   
-console.log(stats)
+console.log(current.name)
   let factBoxes = [];
   // for (const [key, value] of Object.entries(stats)) {
   //   console.log(key)
@@ -42,16 +47,16 @@ console.log(stats)
 
   return (
     <div>
-      <Suspense fallback={<p>Loading...</p>}>
+      {/* <Suspense fallback={<p>Loading...</p>}> */}
         <ImageContainer>
           <img src={current.images.planet} alt={current.name} />
         </ImageContainer>
-      </Suspense>
+      {/* </Suspense> */}
       <div className="planet">
         <h1 className="planet-name">{current.name.toUpperCase()}</h1>
         <p className="planet-description">{current.overview.content}</p>
         <p className="planet-source">
-          Source: <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">Wikipedia </a>
+          Source: <Link to={getPlanetWikiUrl()} target="_blank">Wikipedia </Link>
           <img src={SourceIcon} alt="source" />
         </p>
       </div>
