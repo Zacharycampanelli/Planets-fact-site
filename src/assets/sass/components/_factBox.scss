@@ -1,0 +1,30 @@
+.fact-box {
+    margin-bottom: 3rem;
+
+    .fact {
+        display: flex;
+        justify-content: space-between;
+    align-items: center;
+    color: $white;
+    border: 1px solid $opaqueWhite;
+    margin: 0 24px 8px;
+    padding: 0 24px;
+    text-transform: uppercase;
+    
+    &-topic {
+        margin: 0;
+        font-family: 'SpartanBold';
+        font-size: 8px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.727px;
+        opacity: 0.5;
+    }
+
+    &-stat{
+        font-size: 20px;
+        letter-spacing: -0.75px;
+        font-weight: 400;
+    }
+}
+}

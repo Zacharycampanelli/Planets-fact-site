@@ -3,12 +3,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useMediaQuery } from '@uidotdev/usehooks';
 const SecondaryNavBar = () => {
   // useEffect(() => {
   //   const color = getComputedStyle(document.documentElement).getPropertyValue('--color-Mercury');
   //   console.log(`--color-logo: ${color}`);
   // }, [])
   // document.documentElement.style.setProperty('--color-mercury', 'venus');
+  const isSmallerThanMedium = useMediaQuery('only screen and (max-width: 768px)');
 
   const params = useParams();
   console.log(params);
@@ -24,23 +26,25 @@ const SecondaryNavBar = () => {
             className={({ isActive }) => (isActive ? classnames + ` active-${params.planet}` : classnames)}
             to={`/${params.planet}/overview`}
           >
-            Overview
+            OVERVIEW
           </NavLink>
           <NavLink
             className={({ isActive }) => (isActive ? classnames + ` active-${params.planet}` : classnames)}
             to={`/${params.planet}/structure`}
           >
-            Structure
+            STRUCTURE
           </NavLink>
 
           <NavLink
             className={({ isActive }) => (isActive ? classnames + ` active-${params.planet}` : classnames)}
             to={`/${params.planet}/surface`}
           >
-            Surface
+            SURFACE
           </NavLink>
         </Nav>
       </Container>
+      {isSmallerThanMedium && <hr id="sub-nav-border"/>}
+
     </Navbar>
   );
 };

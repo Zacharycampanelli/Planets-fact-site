@@ -2,8 +2,8 @@
 
 // 1. Configuration and helpers
 @import
-'abstracts/functions',
 'abstracts/variables',
+'abstracts/functions',
 'abstracts/mixins';
 
 // 2. Vendors
@@ -29,12 +29,14 @@
 // 5. Components
 @import
   'components/button',
+  'components/imageContainer',
   'components/navbar',
-  'components/secondaryNavbar';
+  'components/secondaryNavbar',
+  'components/factBox';
 
 // 6. Page-specific styles
-// @import
-//   'pages/home';
+@import
+  'pages/overview';
 
 // 7. Themes
 // @import
