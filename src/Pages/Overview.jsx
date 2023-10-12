@@ -18,10 +18,6 @@ const Overview = () => {
 
 
 
-  const getPlanetWikiUrl = () => {
-    return `https://en.wikipedia.org/wiki/${planet.name}_(planet)`;
-  };
-
   return (
     <div>
       <ImageContainer>
@@ -32,7 +28,7 @@ const Overview = () => {
         <p className="planet-description">{planet.overview.content}</p>
         <p className="planet-source">
           Source:{' '}
-          <Link to={getPlanetWikiUrl()} target="_blank">
+          <Link to={planet.overview.source} target="_blank">
             Wikipedia{' '}
           </Link>
           <img src={SourceIcon} alt="source" />
