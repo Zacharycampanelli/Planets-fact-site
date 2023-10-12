@@ -5,10 +5,7 @@ import SourceIcon from '../assets/images/icon-source.svg';
 const Structure = () => {
   const {planet: [planet, setPlanet], stats: [stats]} = useOutletContext();
 
-  const getPlanetWikiUrl = () => {
-    return `https://en.wikipedia.org/wiki/${planet.name}_(planet)`;
-  };
-  
+
   return (<>
     <ImageContainer>
         <img src={planet.images.internal} alt={planet.name} />
