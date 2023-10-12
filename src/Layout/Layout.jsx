@@ -4,7 +4,7 @@ import SecondaryNavBar from '../Components/SecondaryNavBar/SecondaryNavBar';
 import { useState } from 'react';
 
 const Layout = () => {
- const [navToggleOpen, setNavToggleOpen] = useState('false')
+ const [navToggleOpen, setNavToggleOpen] = useState(false)
 
   return (
     <div id="layout">

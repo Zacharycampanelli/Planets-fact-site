@@ -48,7 +48,7 @@ function NavBar({ navToggleOpen, setNavToggleOpen}) {
                   <Nav.Item className="planet-list-item" key={index}>
                     <span>
                       {!isLargerThanMedium && <div id={createDot(planet.name.toLowerCase())}></div>}
-                      <NavLink className="planet-list-item-link" to={`/${planet.name.toLowerCase()}/overview`}>
+                      <NavLink className="planet-list-item-link" onClick={setToggleStatus} to={`/${planet.name.toLowerCase()}/overview`}>
                         {planet.name}
                       </NavLink>
                     </span>

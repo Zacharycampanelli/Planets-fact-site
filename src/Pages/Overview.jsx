@@ -62,7 +62,7 @@ console.log(current.name)
       </div>
       <div className='fact-box'>
 
-      <div className="facts">{Object.entries(stats).map(([name, value]) => <FactBox name={name} value={value} key={current}/> )}</div>
+      <div className="facts">{Object.entries(stats).map(([name, value]) => <FactBox name={name} value={value} key={current.name}/> )}</div>
       </div>
     </div>
   );
