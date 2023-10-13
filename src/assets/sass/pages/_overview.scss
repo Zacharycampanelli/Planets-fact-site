@@ -1,16 +1,42 @@
 .planet {
-    text-align: center;
-    color: $white;
-    margin-bottom: 28px;
+  text-align: center;
+  color: $white;
+  margin-bottom: 28px;
+  min-width: 100%;
+  @include screen-lg {
+    display: flex;
+    align-items: center;
+    padding:0 40px;
+    justify-content: space-between;
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+
+    @include screen-lg {
+      width: 48%;
+      text-align: left;
+      margin-left: 1rem;
+    }
+  }
+
   &-name {
     font-size: 40px;
     font-weight: 400;
+
+    @include screen-lg {
+      font-size: 48px;
+    }
   }
   &-description {
     margin: 0 1.5rem 2.5rem;
     font-family: 'SpartanRegular';
     font-size: 11px;
     line-height: 22px; /* 200% */
+
+    @include screen-lg {
+      margin-left: 0;
+    }
   }
   &-source {
     font-family: 'SpartanRegular';
@@ -18,11 +44,15 @@
     line-height: 25px;
     opacity: 0.5;
     a {
-        font-family: 'SpartanBold';
-        font-size: 12px;
-        line-height: 25px;
-        color: $white;
-        opacity: 0.5;
+      font-family: 'SpartanBold';
+      font-size: 12px;
+      line-height: 25px;
+      color: $white;
+      opacity: 0.5;
     }
+  }
+
+  #bodyNav {
+    width: 45%;
   }
 }

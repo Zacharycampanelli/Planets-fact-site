@@ -24,7 +24,7 @@ function NavBar({ navToggleOpen, setNavToggleOpen}) {
   // If the browser is resized to a larger size without collapsing the navbar, the navbar is auto set to collapse
   useEffect(() => {
     if (isLargerThanMedium) setNavToggleOpen(false)
-  }, [isLargerThanMedium])
+  }, [isLargerThanMedium, navToggleOpen])
 
 
   return (

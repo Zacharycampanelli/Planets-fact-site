@@ -2,3 +2,7 @@
 @function css-color-var($color) {
   @return var(--color-#{$color});
 }
+
+@function add-prefix-num() {
+  
+}

@@ -1,20 +1,32 @@
 @mixin screen-xs {
-  @media screen and (min-width: #{$screen-xs}) { @content; }
+  @media screen and (min-width: #{$screen-xs}) {
+    @content;
+  }
 }
 @mixin screen-sm {
-  @media screen and (min-width: #{$screen-sm}) { @content; }
-}
-@mixin screen-md {
-  @media screen and (min-width: #{$screen-md}) { @content; }
+  @media screen and (min-width: #{$screen-sm}) {
+    @content;
+  }
 }
 @mixin screen-lg {
-  @media screen and (min-width: #{$screen-lg}) { @content; }
+  @media screen and (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+@mixin screen-lg {
+  @media screen and (min-width: #{$screen-lg}) {
+    @content;
+  }
 }
 @mixin screen-xl {
-  @media screen and (min-width: #{$screen-xl}) { @content; }
+  @media screen and (min-width: #{$screen-xl}) {
+    @content;
+  }
 }
 @mixin screen-xxl {
-  @media screen and (min-width: #{$screen-xxl}) { @content; }
+  @media screen and (min-width: #{$screen-xxl}) {
+    @content;
+  }
 }
 
 @mixin buttonBkg($color) {
@@ -23,7 +35,7 @@
     background-color: $darkGray;
   }
   &:active {
-    background: $color
+    background: $color;
   }
 }
 
@@ -40,7 +52,9 @@
 // used to create the dots next to each planet in the navbar for smaller sizes
 @each $item, $colors in $planetList {
   #dot-#{$item} {
-      @include listDot($color: $colors);
-      @include screen-lg  { display: none}
+    @include listDot($color: $colors);
+    @include screen-lg {
+      display: none;
+    }
   }
 }

@@ -1,47 +1,77 @@
 #secondary_navbar {
+  display: flex;
+  font-family: 'SpartanBold';
+  flex-direction: column;
+  margin: 0 2rem;
+
+  @include screen-lg {
+    margin: 0 1rem;
+  }
+
+  &_nav {
     display: flex;
-    flex-direction: column;
-    margin: 0 2rem;
-    &_nav {
-        
-        display: flex;
-        justify-content: space-between;
-        width: 100vw;
-        flex: 1;
-        .secondary_link {
-            padding-bottom: 1rem;
-            font-size: 9px;
-            text-decoration: none;
-            color: $white;
-        }
-        
-        
-        
-    }
-    @each $planet in $planetOrder {
-        .active-#{$planet} {
-            border-bottom: 3px solid css-color-var($planet);
-            width: 25%;
-            text-align: center;
-        }
+    justify-content: space-between;
+    width: 100vw;
+    flex: 1;
+
+    @include screen-lg {
+      flex-direction: column;
+      width: 50%;
     }
 
-    // .active {
-    //     border-bottom: 3px solid css-color-var(mercury);
-        
-    // }
+    .secondary_link {
+      padding-bottom: 1rem;
+      font-size: 9px;
+      text-decoration: none;
+      color: $white;
+      width: 25%;
 
+      @include screen-lg {
+        border: 1px solid $opaqueWhite;
+        width: 100%;
+        text-align: left;
+        padding: 10px 0 10px 15px;
+        margin-bottom: 1rem;
+
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i})::before {
+            content: '0#{$i}';
+            color: white;
+            margin-right: 12px;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  @each $planet in $planetOrder {
+    .active-#{$planet} {
+      border-bottom: 3px solid css-color-var($planet);
+      text-align: center;
+
+      @include screen-lg {
+        text-align: left;
+        border-bottom: 1px solid $opaqueWhite;
+        background-color: css-color-var($planet);
+      }
+    }
+  }
+
+  // .active {
+  //     border-bottom: 3px solid css-color-var(mercury);
+
+  // }
 }
 
 #sub-nav-border {
-    position: relative;
-    color: $white;
-    width: 100vw;
-    margin: 0;
+  position: relative;
+  color: $white;
+  width: 100vw;
+  margin: 0;
 
-//     position: relative;
-//   left: 50%;
-//   width: 120vw;
-//   margin: 1rem 0 0 -50vw;
-//   color: $white;
+  //     position: relative;
+  //   left: 50%;
+  //   width: 120vw;
+  //   margin: 1rem 0 0 -50vw;
+  //   color: $white;
 }

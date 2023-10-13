@@ -1,15 +1,28 @@
 .fact-box {
-    margin-bottom: 3rem;
-
-    .fact {
+  margin-bottom: 3rem;
+@include screen-lg {
         display: flex;
-        justify-content: space-between;
+        padding: 0 40px;
+        min-width: 100%;
+    }
+  .fact {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     color: $white;
     border: 1px solid $opaqueWhite;
     margin: 0 24px 8px;
     padding: 0 24px;
     text-transform: uppercase;
+
+    @include screen-lg {
+        margin: 0 5px 8px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+        padding: 16px 65px 4px 15px;
+        width: 20.5vw;
+    }
     
     &-topic {
         margin: 0;
@@ -19,12 +32,22 @@
         line-height: 16px;
         letter-spacing: 0.727px;
         opacity: 0.5;
-    }
 
-    &-stat{
+        @include screen-lg {
+            width: 12vw;
+        }
+    }
+    
+    &-stat {
         font-size: 20px;
         letter-spacing: -0.75px;
         font-weight: 400;
+        
+        @include screen-lg {
+            font-size: 24px;
+            letter-spacing: -0.9px;
+            width: 12vw;
+        }
     }
-}
+  }
 }

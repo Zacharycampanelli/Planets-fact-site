@@ -3,11 +3,15 @@ import { Outlet } from 'react-router-dom';
 import NavBar from '../Components/NavBar/NavBar';
 import SecondaryNavBar from '../Components/SecondaryNavBar/SecondaryNavBar';
 import planetData from '../assets/data/data';
+import { useMediaQuery } from '@uidotdev/usehooks';
 
 const Layout = () => {
   const [planet, setPlanet] = useState(planetData[0]);
   const [stats, setStats] = useState({});
   const [navToggleOpen, setNavToggleOpen] = useState(false);
+  const isSmallerThanMedium = useMediaQuery('only screen and (max-width: 768px)');
+
+  
 
   useEffect(() => {setStats( {
     'Rotation Time': planet.rotation,
@@ -22,7 +26,7 @@ const Layout = () => {
       <NavBar navToggleOpen={navToggleOpen} setNavToggleOpen={setNavToggleOpen} />
       {!navToggleOpen === true && (
         <>
-          <SecondaryNavBar />
+          {isSmallerThanMedium && <SecondaryNavBar />}
           <Outlet context={{planet: [planet, setPlanet], stats: [stats]}} />
         </>
       )}
