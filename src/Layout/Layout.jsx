@@ -9,7 +9,7 @@ const Layout = () => {
   const [planet, setPlanet] = useState(planetData[0]);
   const [stats, setStats] = useState({});
   const [navToggleOpen, setNavToggleOpen] = useState(false);
-  const isSmallerThanMedium = useMediaQuery('only screen and (max-width: 768px)');
+  const isSmallerThanMedium = useMediaQuery('only screen and (max-width: 767px)');
 
   
 

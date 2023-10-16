@@ -16,6 +16,7 @@
     align-items: end;
     min-width: 50%;
     width: 50%;
+    padding: 0;
   }
   &-info {
     display: flex;
@@ -56,6 +57,7 @@
     }
 
     @include screen-xxl{
+      margin: 0 0 2.5rem;
       font-size: 14px;
       line-height: 25px;
     }
@@ -68,6 +70,7 @@
 
     @include screen-xxl {
       font-size: 14px;
+      margin-bottom: 2.5rem;
     }
     a {
       font-family: 'SpartanBold';
@@ -82,7 +85,7 @@
     width: 45%;
 
     @include screen-xxl {
-      width: 70%;
+      width: 60%;
     }
   }
 }
@@ -92,6 +95,6 @@
   @include screen-xxl {
     display: flex;
     justify-content: space-between;
-    margin: 16px 25px 47px;
+    margin: 16px 165px 47px;
   }
 }

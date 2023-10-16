@@ -9,6 +9,10 @@
     @include screen-xxl {
         justify-content: center;
     }
+
+    @include screen-xxl {
+        padding: 0;
+    }
   .fact {
     display: flex;
     justify-content: space-between;

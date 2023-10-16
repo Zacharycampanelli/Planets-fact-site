@@ -10,7 +10,7 @@ const SecondaryNavBar = () => {
   //   console.log(`--color-logo: ${color}`);
   // }, [])
   // document.documentElement.style.setProperty('--color-mercury', 'venus');
-  const isSmallerThanMedium = useMediaQuery('only screen and (max-width: 768px)');
+  const isSmallerThanMedium = useMediaQuery('only screen and (max-width: 767px)');
 
   const params = useParams();
   console.log(params);
@@ -18,7 +18,7 @@ const SecondaryNavBar = () => {
   const classnames = 'planet-list-item-link secondary_link';
   return (
     <Navbar id="secondary_navbar">
-      <Container>
+      <Container id='secondary_navbar_container'>
         <Nav id="secondary_navbar_nav">
           {/* <NavLink  className={({isActive}) => isActive? `active-${params.planet} ${planetclassstring}` : `${planetclassstring}` } to={`/${params.planet}/overview`}>Overview</NavLink> */}
           <NavLink

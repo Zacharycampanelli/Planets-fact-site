@@ -4,6 +4,8 @@
     width: 100vw;
     overflow-x: hidden;
     @include screen-xxl {
-        margin: auto 165px;
+        // margin: auto 165px;
+        // width: 90vw;
+        // max-width: 90vw;
     }
 }
