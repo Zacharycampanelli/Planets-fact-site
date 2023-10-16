@@ -42,8 +42,10 @@ function NavBar({ navToggleOpen, setNavToggleOpen}) {
             />
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto" id="navbar-navv">
+              {!isLargerThanMedium &&
                   <hr className="nav-border border-collapse" />
+              }
 
               <div className="planet-list">
                 {planetsData.map((planet, index) => (
@@ -68,6 +70,7 @@ function NavBar({ navToggleOpen, setNavToggleOpen}) {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      
       <div id="nav-border-container">
       <hr className="nav-border" />
 
