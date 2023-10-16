@@ -1,4 +1,9 @@
 #layout{
     background: url('/src/assets/images/background-stars.svg');
- 
+    
+    width: 100vw;
+    overflow-x: hidden;
+    @include screen-xxl {
+        margin: auto 165px;
+    }
 }

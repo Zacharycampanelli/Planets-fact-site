@@ -33,6 +33,7 @@ function NavBar({ navToggleOpen, setNavToggleOpen}) {
         <Container id="navbar-container">
           <Navbar.Brand id="title">The Planets</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
+            
             {' '}
             <img
               src={HamburgerIcon}
@@ -40,9 +41,10 @@ function NavBar({ navToggleOpen, setNavToggleOpen}) {
               className="hamburger-icon"
             />
           </Navbar.Toggle>
-          {!isLargerThanMedium && <hr id="nav-border" />}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+                  <hr className="nav-border border-collapse" />
+
               <div className="planet-list">
                 {planetsData.map((planet, index) => (
                   <Nav.Item className="planet-list-item" key={index}>
@@ -64,10 +66,12 @@ function NavBar({ navToggleOpen, setNavToggleOpen}) {
               </div>
             </Nav>
           </Navbar.Collapse>
-          {isMediumToXxl && <hr id="nav-border" />}
         </Container>
       </Navbar>
-      {isLargerThanXxl && <hr id="nav-border" />}
+      <div id="nav-border-container">
+      <hr className="nav-border" />
+
+      </div>
     </div>
   );
 }

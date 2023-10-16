@@ -13,6 +13,8 @@ const Structure = () => {
 
   return (
   <>
+      <div id="desktop-container">
+
     <ImageContainer>
         <img src={planet.images.internal} alt={planet.name} />
       </ImageContainer>
@@ -33,6 +35,7 @@ const Structure = () => {
             <SecondaryNavBar />
           </div>
         )}
+        </div>
     </div>
       <FactBoxContainer stats={stats} />
  </>

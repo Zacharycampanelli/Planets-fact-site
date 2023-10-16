@@ -8,8 +8,8 @@
     @content;
   }
 }
-@mixin screen-lg {
-  @media screen and (min-width: #{$screen-lg}) {
+@mixin screen-md {
+  @media screen and (min-width: #{$screen-md}) {
     @content;
   }
 }

@@ -13,6 +13,8 @@ const Surface = () => {
 
   return (
   <>
+      <div id="desktop-container">
+
     <ImageContainer>
         <img src={planet.images.geology} alt={planet.name} />
       </ImageContainer>
@@ -33,6 +35,7 @@ const Surface = () => {
             <SecondaryNavBar />
           </div>
         )}
+        </div>
     </div>
       <FactBoxContainer stats={stats} />
 

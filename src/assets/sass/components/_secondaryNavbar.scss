@@ -2,11 +2,12 @@
   display: flex;
   font-family: 'SpartanBold';
   flex-direction: column;
-  margin: 0 2rem;
-
+  margin: 0.5rem;
+  
   @include screen-lg {
     margin: 0 1rem;
   }
+  
 
   &_nav {
     display: flex;
@@ -19,10 +20,14 @@
       width: 50%;
     }
 
+
+
     .secondary_link {
       padding-bottom: 1rem;
       font-size: 9px;
       text-decoration: none;
+      letter-spacing: 2.571px;
+      text-align: center;
       color: $white;
       width: 25%;
 
@@ -39,15 +44,19 @@
             color: white;
             margin-right: 12px;
             opacity: 0.5;
+            line-height: 25px;
           }
         }
+      }
+
+      @include screen-xxl {
+        font-size: 12px;
       }
     }
   }
   @each $planet in $planetOrder {
     .active-#{$planet} {
       border-bottom: 3px solid css-color-var($planet);
-      text-align: center;
 
       @include screen-lg {
         text-align: left;

@@ -24,6 +24,7 @@ const Overview = () => {
 
   return (
     <>
+    <div id="desktop-container">
       <ImageContainer>
         <img src={planet.images.planet} alt={planet.name} />
       </ImageContainer>
@@ -46,6 +47,7 @@ const Overview = () => {
           </div>
         )}
       </div>
+        </div>
       <FactBoxContainer stats={stats} />
     </>
   );

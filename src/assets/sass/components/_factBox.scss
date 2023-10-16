@@ -5,6 +5,10 @@
         padding: 0 40px;
         min-width: 100%;
     }
+
+    @include screen-xxl {
+        justify-content: center;
+    }
   .fact {
     display: flex;
     justify-content: space-between;
@@ -24,6 +28,13 @@
         width: 20.5vw;
     }
     
+    @include screen-xxl {
+        margin: 0 15px 8px;
+        padding: 27px 120px 27px 23px;
+        width: 17.5vw;
+        height: 16vh;
+    }
+
     &-topic {
         margin: 0;
         font-family: 'SpartanBold';
@@ -36,17 +47,26 @@
         @include screen-lg {
             width: 12vw;
         }
+
+        @include screen-xxl {
+            font-size: 11px;
+            line-height: 25px;
+        }
     }
     
     &-stat {
         font-size: 20px;
         letter-spacing: -0.75px;
-        font-weight: 400;
         
         @include screen-lg {
             font-size: 24px;
             letter-spacing: -0.9px;
             width: 12vw;
+        }
+
+        @include screen-xxl {
+            font-size: 40px;
+            letter-spacing: -1.5px;
         }
     }
   }

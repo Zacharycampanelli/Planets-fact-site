@@ -1,18 +1,19 @@
 #navbar {
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
-  
+  padding: 0;
   @include screen-xxl {
-      max-height: 100px;
+    max-height: 100px;
     //   max-width: 90vw;
   }
-  
+
   &-container {
     display: flex;
-    padding: 1rem 1rem 0;
-
+    width: 100%;
+    margin: 16px 24px;
+    padding: 0;
     @include screen-lg {
       flex-direction: column;
       justify-content: center;
@@ -20,14 +21,13 @@
     }
 
     @include screen-xxl {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-        max-width: 100vw;
-        margin: 1rem;
-        padding:  1rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      max-width: 100vw;
+      margin: 1rem;
+      padding: 1rem;
     }
-
   }
 
   #title {
@@ -41,16 +41,16 @@
     }
 
     @include screen-xxl {
-        margin: 1.5vh 1vw 0.5vh 0;
+      margin: 1.5vh 1vw 0.5vh 0;
     }
   }
 
   #basic-navbar-nav {
-      max-width: 40vw;
     background-color: $navy;
+    margin-top: 1rem;
 
     @include screen-xxl {
-        max-width: 45vw;
+      max-width: 45vw;
     }
     .planet-list {
       padding: 0;
@@ -65,7 +65,7 @@
       @include screen-xxl {
         justify-content: start;
         width: 40vw;
-    }
+      }
 
       &-item {
         display: flex;
@@ -81,8 +81,6 @@
           padding: 1rem;
           border: none;
         }
-
-      
 
         &-link {
           font-family: 'SpartanBold';
@@ -110,22 +108,32 @@
 }
 
 // Located in Layout component
-#nav-border {
-  position: relative;
-  left: 50%;
-  width: 120vw;
-  margin: 1rem 0 0 -50vw;
+.nav-border {
   color: $white;
-
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-top: 1px solid white;
   @include screen-lg {
     width: 160vw;
   }
 
   @include screen-xxl {
-      width: 100vw;
-      margin-top: 0;
+    width: 100vw;
+    margin-top: 0;
     overflow-x: hidden;
   }
+}
+
+.border-collapse {
+  margin-bottom: 1.5rem;
+}
+
+#nav-border-container {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .hamburger-icon {
