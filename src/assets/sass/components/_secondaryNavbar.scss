@@ -1,9 +1,9 @@
 #secondary_navbar {
   display: flex;
-  font-family: 'SpartanBold';
   flex-direction: column;
   margin: 0.5rem;
-  
+  font-family: 'SpartanBold';
+
   @include screen-lg {
     margin: 0 1rem;
   }
@@ -12,7 +12,7 @@
     margin: 0;
     padding: 0;
   }
-  
+
   &_container {
     padding: 0;
   }
@@ -20,39 +20,37 @@
   &_nav {
     display: flex;
     justify-content: space-between;
-    width: 100vw;
     flex: 1;
+    width: 100vw;
 
     @include screen-lg {
       flex-direction: column;
       width: 50%;
     }
 
-
-
     .secondary_link {
+      width: 25%;
       padding-bottom: 1rem;
       font-size: 9px;
+      color: $white;
+      text-align: center;
       text-decoration: none;
       letter-spacing: 2.571px;
-      text-align: center;
-      color: $white;
-      width: 25%;
 
       @include screen-lg {
-        border: 1px solid $opaqueWhite;
         width: 100%;
-        text-align: left;
-        padding: 10px 0 10px 15px;
         margin-bottom: 1rem;
+        padding: 10px 0 10px 15px;
+        border: 1px solid $opaqueWhite;
+        text-align: left;
 
         @for $i from 1 through 3 {
           &:nth-child(#{$i})::before {
             content: '0#{$i}';
-            color: white;
             margin-right: 12px;
-            opacity: 0.5;
+            color: $white;
             line-height: 25px;
+            opacity: 0.5;
           }
         }
       }
@@ -62,33 +60,24 @@
       }
     }
   }
+
+  // Sets the border for each selected subsection in the secondary nav bar
   @each $planet in $planetOrder {
     .active-#{$planet} {
       border-bottom: 3px solid css-color-var($planet);
 
       @include screen-lg {
-        text-align: left;
         border-bottom: 1px solid $opaqueWhite;
         background-color: css-color-var($planet);
+        text-align: left;
       }
     }
   }
-
-  // .active {
-  //     border-bottom: 3px solid css-color-var(mercury);
-
-  // }
 }
 
 #sub-nav-border {
   position: relative;
-  color: $white;
   width: 100vw;
   margin: 0;
-
-  //     position: relative;
-  //   left: 50%;
-  //   width: 120vw;
-  //   margin: 1rem 0 0 -50vw;
-  //   color: $white;
+  color: $white;
 }

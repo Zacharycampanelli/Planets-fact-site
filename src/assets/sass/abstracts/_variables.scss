@@ -16,10 +16,6 @@ $opaqueWhite: rgba(255, 255, 255, 0.2);
 
 // Used with root declaration and css-color-var function to use css variables
 $css-color-vars: (
-  // white: #ffffff,
-  // navy: #070724,
-  // darkGray: #38384f,
-  // lightGray: #838391,
   mercury: #419ebb,
   venus: #eda249,
   earth: #6f2ed6,
@@ -30,15 +26,7 @@ $css-color-vars: (
   neptune: #2d68f0
 );
 
-// :root {
-//   --mercury: #419ebb;
-//   --planet-color: #{meta.inspect($mercury)};
-// }
-
-$planetColor: css-color-var(mercury);
-$planetColorOrder: $mercury, $venus, $earth, $mars, $jupiter, $saturn, $uranus, $neptune;
-$planetOrder: 'mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune';
-$planetList: (
+$planetColors: (
   'mercury': $mercury,
   'venus': $venus,
   'earth': $earth,
@@ -48,6 +36,9 @@ $planetList: (
   'uranus': $uranus,
   'neptune': $neptune,
 );
+
+$planetOrder: 'mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune';
+
 // Media Query variables
 $screen-xs: 325px;
 $screen-sm: 480px;

@@ -1,16 +1,4 @@
-$planetColors: (
-  'mercury': $mercury,
-  'venus': $venus,
-  'earth': $earth,
-  'mars': $mars,
-  'jupiter': $jupiter,
-  'saturn': $saturn,
-  'uranus': $uranus,
-  'neptune': $neptune,
-);
-
 .btn {
-  // uses h3
   border: 1px solid $white;
 
   &_num {
@@ -18,6 +6,7 @@ $planetColors: (
   }
 }
 
+// Colors buttons according to specific planet's color
 @each $name, $color in $planetColors {
   .button-#{$name} {
     @include buttonBkg($color);

@@ -1,19 +1,19 @@
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 6rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 4rem;
+
+  @include screen-xxl {
+    margin: 13rem 0rem 13rem 9rem;
+  }
+
+  img {
+    width: 50%;
+
     @include screen-xxl {
-
-        margin: 13rem 0rem 13rem 9rem;
+      justify-self: end;
+      width: 20vw;
     }
-
-    img {
-        width: 50%;
-        
-        @include screen-xxl {
-            justify-self: end;
-            width: 20vw;
-        }
-    }
+  }
 }

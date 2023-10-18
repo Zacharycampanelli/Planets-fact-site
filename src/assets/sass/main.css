@@ -144,8 +144,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1, .h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 2em;
 }
 
 /* Grouping content
@@ -13332,19 +13332,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/**
- * Set up a decent box model on the root element
- */
 html {
   box-sizing: border-box;
 }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *,
 *::before,
 *::after {
@@ -13353,8 +13344,8 @@ html {
 
 body {
   background-color: #070724;
-  background-size: cover;
   background-image: url("/src/assets/images/background-stars.svg");
+  background-size: cover;
 }
 
 :root {
@@ -13367,6 +13358,10 @@ body {
   --color-uranus: #1ec2a4;
   --color-neptune: #2d68f0;
   --planet-color: css-color-var(venus);
+}
+
+.loading-text {
+  color: #ffffff;
 }
 
 @font-face {
@@ -13383,42 +13378,47 @@ body {
 }
 h1, .h1 {
   font-family: "AntonioMedium";
-  font-size: 80px;
-  line-height: 103px;
+  font-size: 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  h1, .h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  h1, .h1 {
+    font-size: 80px;
+  }
 }
 
 h2, .h2 {
   font-family: "AntonioMedium";
-  font-size: 40px;
+  font-size: 20px;
+  color: #ffffff;
   line-height: 52px;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.75px;
 }
-
-h3, .h3 {
-  font-family: "SpartanBold";
-  font-size: 12px;
-  line-height: 25px;
-  letter-spacing: 2.6px;
+@media screen and (min-width: 768px) {
+  h2, .h2 {
+    font-size: 24px;
+    letter-spacing: -0.9px;
+  }
 }
-
-h4, .h4 {
-  font-family: "SpartanBold";
-  font-size: 11px;
-  line-height: 25px;
-  letter-spacing: 1px;
-}
-
-body {
-  font-family: "SpartanRegular";
-  font-size: 14px;
-  line-height: 25px;
+@media screen and (min-width: 1440px) {
+  h2, .h2 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
 }
 
 #layout {
-  background: url("/src/assets/images/background-stars.svg");
   width: 100vw;
+  background: url("/src/assets/images/background-stars.svg");
   overflow-x: hidden;
 }
+
 .btn {
   border: 1px solid #ffffff;
 }
@@ -13531,8 +13531,8 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  overflow-x: hidden;
   padding: 0;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 1440px) {
   #navbar {
@@ -13565,8 +13565,8 @@ body {
 #navbar #title {
   font-family: "AntonioMedium";
   font-size: 28px;
+  color: #ffffff;
   text-transform: uppercase;
-  color: white;
 }
 @media screen and (min-width: 768px) {
   #navbar #title {
@@ -13579,8 +13579,8 @@ body {
   }
 }
 #navbar #basic-navbar-nav {
-  background-color: #070724;
   margin-top: 1rem;
+  background-color: #070724;
 }
 @media screen and (min-width: 1440px) {
   #navbar #basic-navbar-nav {
@@ -13588,9 +13588,9 @@ body {
   }
 }
 #navbar #basic-navbar-nav .planet-list {
-  padding: 0;
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   #navbar #basic-navbar-nav .planet-list {
@@ -13623,9 +13623,9 @@ body {
 #navbar #basic-navbar-nav .planet-list-item-link {
   font-family: "SpartanBold";
   font-size: 15px;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  color: #ffffff;
 }
 #navbar #basic-navbar-nav .planet-list-item-link:visited {
   color: #ffffff;
@@ -13636,16 +13636,16 @@ body {
   }
 }
 #navbar #basic-navbar-nav .planet-list-item-arrow {
-  margin-left: 20px;
   justify-self: end;
+  margin-left: 20px;
 }
 
 .nav-border {
-  color: #ffffff;
   width: 100%;
   margin: 0;
   border: none;
-  border-top: 1px solid white;
+  border-top: 1px solid #ffffff;
+  color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .nav-border {
@@ -13675,15 +13675,15 @@ body {
   opacity: 0.25;
 }
 
-#navbar-navv {
+#navbar-nav {
   flex-direction: column;
 }
 
 #secondary_navbar {
   display: flex;
-  font-family: "SpartanBold";
   flex-direction: column;
   margin: 0.5rem;
+  font-family: "SpartanBold";
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar {
@@ -13702,8 +13702,8 @@ body {
 #secondary_navbar_nav {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
   flex: 1;
+  width: 100vw;
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar_nav {
@@ -13712,42 +13712,42 @@ body {
   }
 }
 #secondary_navbar_nav .secondary_link {
+  width: 25%;
   padding-bottom: 1rem;
   font-size: 9px;
+  color: #ffffff;
+  text-align: center;
   text-decoration: none;
   letter-spacing: 2.571px;
-  text-align: center;
-  color: #ffffff;
-  width: 25%;
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar_nav .secondary_link {
-    border: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
-    text-align: left;
-    padding: 10px 0 10px 15px;
     margin-bottom: 1rem;
+    padding: 10px 0 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
   }
   #secondary_navbar_nav .secondary_link:nth-child(1)::before {
     content: "01";
-    color: white;
     margin-right: 12px;
-    opacity: 0.5;
+    color: #ffffff;
     line-height: 25px;
+    opacity: 0.5;
   }
   #secondary_navbar_nav .secondary_link:nth-child(2)::before {
     content: "02";
-    color: white;
     margin-right: 12px;
-    opacity: 0.5;
+    color: #ffffff;
     line-height: 25px;
+    opacity: 0.5;
   }
   #secondary_navbar_nav .secondary_link:nth-child(3)::before {
     content: "03";
-    color: white;
     margin-right: 12px;
-    opacity: 0.5;
+    color: #ffffff;
     line-height: 25px;
+    opacity: 0.5;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -13760,9 +13760,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar .active-mercury {
-    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--color-mercury);
+    text-align: left;
   }
 }
 #secondary_navbar .active-venus {
@@ -13770,9 +13770,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar .active-venus {
-    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--color-venus);
+    text-align: left;
   }
 }
 #secondary_navbar .active-earth {
@@ -13780,9 +13780,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar .active-earth {
-    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--color-earth);
+    text-align: left;
   }
 }
 #secondary_navbar .active-mars {
@@ -13790,9 +13790,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar .active-mars {
-    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--color-mars);
+    text-align: left;
   }
 }
 #secondary_navbar .active-jupiter {
@@ -13800,9 +13800,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar .active-jupiter {
-    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--color-jupiter);
+    text-align: left;
   }
 }
 #secondary_navbar .active-saturn {
@@ -13810,9 +13810,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar .active-saturn {
-    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--color-saturn);
+    text-align: left;
   }
 }
 #secondary_navbar .active-uranus {
@@ -13820,9 +13820,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar .active-uranus {
-    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--color-uranus);
+    text-align: left;
   }
 }
 #secondary_navbar .active-neptune {
@@ -13830,17 +13830,17 @@ body {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar .active-neptune {
-    text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--color-neptune);
+    text-align: left;
   }
 }
 
 #sub-nav-border {
   position: relative;
-  color: #ffffff;
   width: 100vw;
   margin: 0;
+  color: #ffffff;
 }
 
 .fact-box {
@@ -13849,17 +13849,13 @@ body {
 @media screen and (min-width: 768px) {
   .fact-box {
     display: flex;
-    padding: 0 40px;
     min-width: 100%;
+    padding: 0 40px;
   }
 }
 @media screen and (min-width: 1440px) {
   .fact-box {
     justify-content: center;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .fact-box {
     padding: 0;
   }
 }
@@ -13867,35 +13863,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 0 24px 8px;
   padding: 0 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .fact-box .fact {
-    margin: 0 5px 8px;
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
-    padding: 16px 65px 4px 15px;
     width: 20.5vw;
+    margin: 0 5px 8px;
+    padding: 16px 65px 4px 15px;
   }
 }
 @media screen and (min-width: 1440px) {
   .fact-box .fact {
-    margin: 0 15px 8px;
-    padding: 27px 120px 27px 23px;
     width: 17.5vw;
     height: 16vh;
+    margin: 0 15px 8px;
+    padding: 27px 120px 27px 23px;
   }
 }
 .fact-box .fact-topic {
   margin: 0;
   font-family: "SpartanBold";
   font-size: 8px;
-  font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.727px;
   opacity: 0.5;
@@ -13911,36 +13906,24 @@ body {
     line-height: 25px;
   }
 }
-.fact-box .fact-stat {
-  font-size: 20px;
-  letter-spacing: -0.75px;
-}
 @media screen and (min-width: 768px) {
   .fact-box .fact-stat {
-    font-size: 24px;
-    letter-spacing: -0.9px;
     width: 12vw;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .fact-box .fact-stat {
-    font-size: 40px;
-    letter-spacing: -1.5px;
   }
 }
 
 .planet {
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 1rem;
   min-width: 100%;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .planet {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -13948,8 +13931,8 @@ body {
     flex-direction: column;
     justify-content: end;
     align-items: end;
-    min-width: 50%;
     width: 50%;
+    min-width: 50%;
     padding: 0;
   }
 }
@@ -13960,8 +13943,8 @@ body {
 @media screen and (min-width: 768px) {
   .planet-info {
     width: 48%;
-    text-align: left;
     margin-left: 1rem;
+    text-align: left;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -13970,24 +13953,18 @@ body {
   }
 }
 .planet-name {
-  font-size: 40px;
-  font-weight: 400;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
   .planet-name {
-    font-size: 48px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .planet-name {
-    font-size: 80px;
+    margin-bottom: 24px;
   }
 }
 .planet-description {
   margin: 0 1.5rem 2.5rem;
   font-family: "SpartanRegular";
   font-size: 11px;
-  line-height: 22px; /* 200% */
+  line-height: 22px;
 }
 @media screen and (min-width: 768px) {
   .planet-description {
@@ -14009,15 +13986,15 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .planet-source {
-    font-size: 14px;
     margin-bottom: 2.5rem;
+    font-size: 14px;
   }
 }
 .planet-source a {
   font-family: "SpartanBold";
   font-size: 12px;
-  line-height: 25px;
   color: #ffffff;
+  line-height: 25px;
   opacity: 0.5;
 }
 .planet #bodyNav {

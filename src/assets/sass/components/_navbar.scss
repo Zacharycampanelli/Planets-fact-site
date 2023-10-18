@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  overflow-x: hidden;
   padding: 0;
+  overflow-x: hidden;
+
   @include screen-xxl {
     max-height: 100px;
-    //   max-width: 90vw;
   }
 
   &-container {
@@ -14,6 +14,7 @@
     width: 100%;
     margin: 16px 24px;
     padding: 0;
+
     @include screen-lg {
       flex-direction: column;
       justify-content: center;
@@ -33,8 +34,8 @@
   #title {
     font-family: 'AntonioMedium';
     font-size: 28px;
+    color: $white;
     text-transform: uppercase;
-    color: white;
 
     @include screen-lg {
       margin: 1.5vh auto 2.5vh;
@@ -46,16 +47,17 @@
   }
 
   #basic-navbar-nav {
-    background-color: $navy;
     margin-top: 1rem;
+    background-color: $navy;
 
     @include screen-xxl {
       max-width: 45vw;
     }
+
     .planet-list {
-      padding: 0;
       display: flex;
       flex-direction: column;
+      padding: 0;
 
       @include screen-lg {
         flex-direction: row;
@@ -85,9 +87,9 @@
         &-link {
           font-family: 'SpartanBold';
           font-size: 15px;
+          color: $white;
           text-decoration: none;
           text-transform: uppercase;
-          color: $white;
 
           &:visited {
             color: $white;
@@ -99,8 +101,8 @@
         }
 
         &-arrow {
-          margin-left: 20px;
           justify-self: end;
+          margin-left: 20px;
         }
       }
     }
@@ -109,11 +111,12 @@
 
 // Located in Layout component
 .nav-border {
-  color: $white;
   width: 100%;
   margin: 0;
   border: none;
-  border-top: 1px solid white;
+  border-top: 1px solid $white;
+  color: $white;
+
   @include screen-lg {
     width: 160vw;
   }
@@ -140,6 +143,6 @@
   opacity: 0.25;
 }
 
-#navbar-navv {
+#navbar-nav {
   flex-direction: column;
 }

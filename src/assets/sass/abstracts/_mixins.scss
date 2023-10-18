@@ -29,6 +29,7 @@
   }
 }
 
+// Colors the Navigation buttons for each planet page
 @mixin buttonBkg($color) {
   background-color: transparent;
   &:hover {
@@ -50,7 +51,7 @@
 }
 
 // used to create the dots next to each planet in the navbar for smaller sizes
-@each $item, $colors in $planetList {
+@each $item, $colors in $planetColors {
   #dot-#{$item} {
     @include listDot($color: $colors);
     @include screen-lg {

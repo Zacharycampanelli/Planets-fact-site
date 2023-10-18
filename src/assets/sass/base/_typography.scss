@@ -1,32 +1,32 @@
 h1 {
   font-family: 'AntonioMedium';
-  font-size: 80px; 
-  line-height: 103px;
+  font-size: 40px;
+  color: $white;
+  text-transform: uppercase;
+
+  @include screen-lg {
+    font-size: 48px;
+  }
+
+  @include screen-xxl {
+    font-size: 80px;
+  }
 }
 
 h2 {
   font-family: 'AntonioMedium';
-  font-size: 40px; 
+  font-size: 20px;
+  color: $white;
   line-height: 52px;
-  letter-spacing: -1.5px;
-}
+  letter-spacing: -0.75px;
 
-h3 {
-  font-family: 'SpartanBold';
-  font-size: 12px; 
-  line-height: 25px;
-  letter-spacing: 2.6px;
-}
+  @include screen-lg {
+    font-size: 24px;
+    letter-spacing: -0.9px;
+  }
 
-h4 {
-  font-family: 'SpartanBold';
-  font-size: 11px; 
-  line-height: 25px;
-  letter-spacing: 1px;
-}
-
-body {
-  font-family: 'SpartanRegular';
-  font-size: 14px; 
-  line-height: 25px;
+  @include screen-xxl {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
 }
