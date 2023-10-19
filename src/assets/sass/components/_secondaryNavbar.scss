@@ -5,7 +5,7 @@
   font-family: 'SpartanBold';
 
   @include screen-lg {
-    margin: 0 1rem;
+    margin: 0;
   }
 
   @include screen-xxl {
@@ -36,6 +36,10 @@
       text-align: center;
       text-decoration: none;
       letter-spacing: 2.571px;
+      
+      &:hover {
+        background-color: $opaqueLightGray;
+      }
 
       @include screen-lg {
         width: 100%;

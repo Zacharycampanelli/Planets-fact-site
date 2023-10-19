@@ -1,5 +1,11 @@
 #layout {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   background: url('/src/assets/images/background-stars.svg');
   overflow-x: hidden;
+
+  @include screen-xxl {
+    align-items: center;
+  }
 }

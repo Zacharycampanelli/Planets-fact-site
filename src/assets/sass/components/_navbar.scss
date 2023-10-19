@@ -90,11 +90,17 @@
           color: $white;
           text-decoration: none;
           text-transform: uppercase;
+          opacity: 0.75;
 
           &:visited {
             color: $white;
           }
 
+          &:hover {
+            opacity: 1;
+          }
+
+          
           @include screen-lg {
             font-size: 11px;
           }

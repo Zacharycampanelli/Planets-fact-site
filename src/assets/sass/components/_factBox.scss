@@ -3,21 +3,25 @@
 
   @include screen-lg {
     display: flex;
+    justify-content: space-between;
     min-width: 100%;
     padding: 0 40px;
   }
 
   @include screen-xxl {
     justify-content: center;
+    width: 78%;
+    min-width: 78%;
     padding: 0;
+    ;
   }
 
   .fact {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 24px 8px;
-    padding: 0 24px;
+    margin: 0 1.5rem 0.5rem;
+    padding: 0 1.5rem;
     border: 1px solid $opaqueWhite;
     color: $white;
     text-transform: uppercase;
@@ -26,16 +30,28 @@
       flex-direction: column;
       justify-content: space-around;
       align-items: start;
-      width: 20.5vw;
-      margin: 0 5px 8px;
-      padding: 16px 65px 4px 15px;
+      min-width: 23%;
+      margin: 0 .5rem;
+      padding: 1rem 4rem 0.25rem 1rem;
     }
 
     @include screen-xxl {
-      width: 17.5vw;
+    //   width: 17.5vw;
       height: 16vh;
       margin: 0 15px 8px;
       padding: 27px 120px 27px 23px;
+    }
+
+    &:first-child {
+        @include screen-lg {
+            margin-left: 0;
+        }
+    }
+    
+    &:last-child {
+        @include screen-lg {
+            margin-right: 0;
+        }
     }
 
     &-topic {
@@ -47,7 +63,7 @@
       opacity: 0.5;
 
       @include screen-lg {
-        width: 12vw;
+        width: 13vw;
       }
 
       @include screen-xxl {
@@ -58,7 +74,7 @@
 
     &-stat {
       @include screen-lg {
-        width: 12vw;
+        width: 13vw;
       }
     }
   }

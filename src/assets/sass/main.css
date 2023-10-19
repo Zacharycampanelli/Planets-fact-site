@@ -13414,9 +13414,16 @@ h2, .h2 {
 }
 
 #layout {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   background: url("/src/assets/images/background-stars.svg");
   overflow-x: hidden;
+}
+@media screen and (min-width: 1440px) {
+  #layout {
+    align-items: center;
+  }
 }
 
 .btn {
@@ -13626,9 +13633,13 @@ h2, .h2 {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+  opacity: 0.75;
 }
 #navbar #basic-navbar-nav .planet-list-item-link:visited {
   color: #ffffff;
+}
+#navbar #basic-navbar-nav .planet-list-item-link:hover {
+  opacity: 1;
 }
 @media screen and (min-width: 768px) {
   #navbar #basic-navbar-nav .planet-list-item-link {
@@ -13687,7 +13698,7 @@ h2, .h2 {
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar {
-    margin: 0 1rem;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -13719,6 +13730,9 @@ h2, .h2 {
   text-align: center;
   text-decoration: none;
   letter-spacing: 2.571px;
+}
+#secondary_navbar_nav .secondary_link:hover {
+  background-color: rgba(216, 216, 216, 0.2);
 }
 @media screen and (min-width: 768px) {
   #secondary_navbar_nav .secondary_link {
@@ -13849,6 +13863,7 @@ h2, .h2 {
 @media screen and (min-width: 768px) {
   .fact-box {
     display: flex;
+    justify-content: space-between;
     min-width: 100%;
     padding: 0 40px;
   }
@@ -13856,6 +13871,8 @@ h2, .h2 {
 @media screen and (min-width: 1440px) {
   .fact-box {
     justify-content: center;
+    width: 78%;
+    min-width: 78%;
     padding: 0;
   }
 }
@@ -13863,8 +13880,8 @@ h2, .h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 24px 8px;
-  padding: 0 24px;
+  margin: 0 1.5rem 0.5rem;
+  padding: 0 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ffffff;
   text-transform: uppercase;
@@ -13874,17 +13891,26 @@ h2, .h2 {
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
-    width: 20.5vw;
-    margin: 0 5px 8px;
-    padding: 16px 65px 4px 15px;
+    min-width: 23%;
+    margin: 0 0.5rem;
+    padding: 1rem 4rem 0.25rem 1rem;
   }
 }
 @media screen and (min-width: 1440px) {
   .fact-box .fact {
-    width: 17.5vw;
     height: 16vh;
     margin: 0 15px 8px;
     padding: 27px 120px 27px 23px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fact-box .fact:first-child {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fact-box .fact:last-child {
+    margin-right: 0;
   }
 }
 .fact-box .fact-topic {
@@ -13897,7 +13923,7 @@ h2, .h2 {
 }
 @media screen and (min-width: 768px) {
   .fact-box .fact-topic {
-    width: 12vw;
+    width: 13vw;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -13908,7 +13934,7 @@ h2, .h2 {
 }
 @media screen and (min-width: 768px) {
   .fact-box .fact-stat {
-    width: 12vw;
+    width: 13vw;
   }
 }
 
