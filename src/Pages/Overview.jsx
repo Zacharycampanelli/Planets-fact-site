@@ -7,6 +7,7 @@ import SecondaryNavBar from '../Components/SecondaryNavBar/SecondaryNavBar';
 import SourceIcon from '../assets/images/icon-source.svg';
 import planetData from '../assets/data/data';
 
+import MercuryImage from '../assets/images/planet-mercury.svg'
 const Overview = () => {
   const {
     planet: [planet, setPlanet],
@@ -27,7 +28,7 @@ const Overview = () => {
     <>
       <div id="desktop-container">
         <ImageContainer>
-          <img src={planet.images.planet} alt={planet.name} />
+          <img src={MercuryImage} alt={planet.name} />
         </ImageContainer>
         <div className="planet">
           <div className="planet-info">

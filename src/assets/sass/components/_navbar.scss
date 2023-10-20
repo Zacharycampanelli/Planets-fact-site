@@ -78,6 +78,11 @@
         padding: 20px;
         border-bottom: 1px solid $opaqueWhite;
 
+        &:last-child {
+          border-bottom: none;
+
+        }
+
         @include screen-lg {
           width: 11vw;
           padding: 1rem;

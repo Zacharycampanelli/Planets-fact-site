@@ -61,7 +61,7 @@ function NavBar({ navToggleOpen, setNavToggleOpen }) {
         </Container>
       </Navbar>
       <div id="nav-border-container">
-        <hr className="nav-border" />
+        {!navToggleOpen && <hr className="nav-border" />}
       </div>
     </div>
   );
