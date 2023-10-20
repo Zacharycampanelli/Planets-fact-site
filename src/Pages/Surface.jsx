@@ -4,19 +4,26 @@ import FactBoxContainer from '../Components/FactBoxContainer/FactBoxContainer';
 import ImageContainer from '../Components/ImageContainer/ImageContainer';
 import SecondaryNavBar from '../Components/SecondaryNavBar/SecondaryNavBar';
 import SourceIcon from '../assets/images/icon-source.svg';
+import getSurfaceImageByKey from '../Utils/getSurfaceImageByKey';
 
 const Surface = () => {
   const {
     planet: [planet, setPlanet],
     stats: [stats],
   } = useOutletContext();
+
   const isLargerThanMedium = useMediaQuery('only screen and (min-width: 768px)');
+
+  let selectedImage = '';
+
+  let imageName = `${planet.name}Image`;
+  selectedImage = getSurfaceImageByKey(imageName);
 
   return (
     <>
       <div id="desktop-container">
         <ImageContainer>
-          <img src={planet.images.geology} alt={planet.name} />
+          <img src={selectedImage} alt={planet.name} />
         </ImageContainer>
         <div className="planet">
           <div className="planet-info">

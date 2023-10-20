@@ -7,19 +7,16 @@ import SecondaryNavBar from '../Components/SecondaryNavBar/SecondaryNavBar';
 import SourceIcon from '../assets/images/icon-source.svg';
 import planetData from '../assets/data/data';
 import getImageByKey from '../Utils/getImageByKey';
-import MercuryImage from '../assets/images/planet-mercury.svg'
 
 const Overview = () => {
   const {
     planet: [planet, setPlanet],
     stats: [stats],
   } = useOutletContext();
-  console.log(planet.name)
   const isLargerThanMedium = useMediaQuery('only screen and (min-width: 768px)');
 
   // Fetch info on specific planet chosen
   const params = useParams();
-  let selectedImage = '';
   // Retrieves data for specific planet on page change
   useEffect(() => {
     for (let planet of planetData) {
@@ -27,12 +24,10 @@ const Overview = () => {
     }
   }, [planet]);
 
-  // useEffect(() => {
-    let imageName = `${planet.name}Image`;
-    selectedImage = getImageByKey(imageName)
-  // }, [])
-console.log(selectedImage)
+  let selectedImage = '';
 
+  let imageName = `${planet.name}Image`;
+  selectedImage = getImageByKey(imageName);
 
   return (
     <>
