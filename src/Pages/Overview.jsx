@@ -6,29 +6,39 @@ import FactBoxContainer from '../Components/FactBoxContainer/FactBoxContainer';
 import SecondaryNavBar from '../Components/SecondaryNavBar/SecondaryNavBar';
 import SourceIcon from '../assets/images/icon-source.svg';
 import planetData from '../assets/data/data';
-
+import getImageByKey from '../Utils/getImageByKey';
 import MercuryImage from '../assets/images/planet-mercury.svg'
+
 const Overview = () => {
   const {
     planet: [planet, setPlanet],
     stats: [stats],
   } = useOutletContext();
+  console.log(planet.name)
   const isLargerThanMedium = useMediaQuery('only screen and (min-width: 768px)');
 
   // Fetch info on specific planet chosen
   const params = useParams();
-
+  let selectedImage = '';
+  // Retrieves data for specific planet on page change
   useEffect(() => {
     for (let planet of planetData) {
       if (planet.name.toLowerCase() === params.planet.toLowerCase()) setPlanet(planet);
     }
   }, [planet]);
 
+  // useEffect(() => {
+    let imageName = `${planet.name}Image`;
+    selectedImage = getImageByKey(imageName)
+  // }, [])
+console.log(selectedImage)
+
+
   return (
     <>
       <div id="desktop-container">
         <ImageContainer>
-          <img src={MercuryImage} alt={planet.name} />
+          <img src={selectedImage} alt={planet.name} />
         </ImageContainer>
         <div className="planet">
           <div className="planet-info">
