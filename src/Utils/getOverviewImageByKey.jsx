@@ -18,8 +18,8 @@ const images = {
   NeptuneImage,
 };
 
-const getImageByKey = (str) => {
+const getOverviewImageByKey = (str) => {
   return images[str];
 };
 
-export default getImageByKey;
+export default getOverviewImageByKey;
